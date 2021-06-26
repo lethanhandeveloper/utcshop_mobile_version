@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#fff"
+    >
+    <TextView
+        android:id="@+id/txt_title_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chi tiết đơn hàng"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_expand_more_24"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/txt_info_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title_lable"
+        android:textSize="16sp"
+        android:text=""/>
+    <TextView
+        android:id="@+id/txt_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_info_list"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:text="Tổng tiền :"/>
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_total_price"
+        android:background="@drawable/custom_btn_login"
+        android:layout_marginTop="10dp"
+        android:text="Tiếp tục thanh toán"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

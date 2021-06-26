@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vku.lethanhan.utcshop">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:label="UTC Shop"
+        android:roundIcon="@mipmap/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan">
+        <activity android:name=".activity.SuccessfulPaymentActivity"></activity>
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.CommentActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.OrderingStatementActivity" />
+        <activity android:name=".activity.ViewProductActivity" />
+        <activity android:name=".activity.CartActitvity" />
+        <activity android:name=".activity.DetailActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main_fragment.HomeFragment"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/colormainApp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục sản phẩm"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:textColor="#fff" />
+            <ImageView
+                android:id="@+id/img_cart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cart"
+                app:tint="#fff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/txt_phone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục điện thoại"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_phone_title"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/txt_accessory_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục phụ kiện"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_below="@+id/rv_phone"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_accessory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_accessory_title"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

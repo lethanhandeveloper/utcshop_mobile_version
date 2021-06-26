@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="50dp"
+    android:padding="10dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView
+        android:background="#fff"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+        <ImageView
+            android:id="@+id/img_item_fly"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/product_demo"
+            android:layout_marginEnd="15dp"/>
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/product_demo"
+            android:layout_marginEnd="15dp"/>
+        <TextView
+            android:id="@+id/txt_name_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iphone 11 promax black"
+            android:layout_toRightOf="@+id/img_product"
+            android:textSize="15sp"
+            android:textColor="#C4000000"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt_price_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.000.000đ"
+            android:layout_toRightOf="@+id/img_product"
+            android:layout_below="@+id/txt_name_product"
+            android:textSize="12sp"
+            android:textColor="#DD2C00"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_old_price_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name_product"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/txt_price_view"
+            android:text="10.000.000đ"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txt_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Còn hàng"
+            android:layout_toRightOf="@+id/img_product"
+            android:layout_below="@+id/txt_price_view"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_add_cart"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_stock"
+            android:layout_marginTop="10dp"
+            android:text="Thêm vào giỏ hàng"
+            android:textColor="@color/colormainApp"
+            android:background="@drawable/custom_button_add_cart"
+            android:layout_toRightOf="@+id/img_product"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

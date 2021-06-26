@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:folding-cell="http://schemas.android.com/tools"
+    android:id="@+id/folding_cell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:padding="10dp"
+    android:clipToPadding="false">
+    //
+    <FrameLayout
+        android:id="@+id/fr_main_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:background="#000"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem thông tin đơn hàng"
+                    android:drawableRight="@drawable/ic_collapse"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fr_extra_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_order_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã đơn hàng"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin người nhận :"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên :"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ :"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian đặt hàng :"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/txt_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem các sản phẩm của đơn hàng"
+                android:drawableRight="@drawable/ic_baseline_expand_more_24"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+    ​
+</com.ramotion.foldingcell.FoldingCell>

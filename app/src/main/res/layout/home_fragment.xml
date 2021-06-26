@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colormainApp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txt_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="UTC SHOP"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_cart"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            app:tint="#fff"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cart" />
+        <!--        <EditText-->
+        <!--            android:id="@+id/edt_search_box"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:hint="Nhập sản phẩm để tìm kiếm"-->
+        <!--            android:textColor="#fff"-->
+        <!--            android:layout_below="@+id/txt_shop_name"-->
+        <!--            />-->
+<!--        <SearchView-->
+<!--            android:id="@+id/search_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_below="@+id/txt_shop_name"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:background="@drawable/shapebgsearch"-->
+<!--            app:iconifiedByDefault="false" />-->
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txt_shop_name"
+            android:background="@drawable/custom_edittext"
+            android:padding="5dp"
+            android:maxLines="1"
+            android:drawableLeft="@drawable/ic_search_black"
+            android:drawablePadding="10dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="Nhập tại đây để tìm kiếm sản phẩm"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/rel">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circleindicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:paddingHorizontal="5dp"
+                    app:ci_width="5dp"
+                    app:ci_height="5dp"
+                    app:ci_drawable="@color/colormainApp"
+                    app:ci_drawable_unselected="@color/black"
+                    android:layout_gravity="bottom|center_horizontal" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_new_product_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fr_layout"
+                android:layout_marginStart="30dp"
+                android:text="Sản phẩm mới nhất"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_new_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_below="@+id/txt_new_product_label"
+                android:layout_marginTop="5dp" />
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:padding="10dp"
+                android:layout_below="@+id/rv_new_product"
+                android:src="@drawable/blackfriday"/>
+            <TextView
+                android:id="@+id/txt_top_product_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:text="Sản phẩm bán chạy"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hot_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_below="@+id/txt_top_product_label"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

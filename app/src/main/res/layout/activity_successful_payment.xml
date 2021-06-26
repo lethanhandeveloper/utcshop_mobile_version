@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/custom_btn_login"
+    android:layout_height="match_parent"
+    tools:context="com.vku.lethanhan.utcshop.activity.SuccessfulPaymentActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp">
+            <ImageView
+                android:id="@+id/img_order_success"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_order_success"/>
+            <TextView
+                android:id="@+id/txt_success_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt hàng thành công"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@+id/img_order_success"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="#DD2C00"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txt_success_order"
+                android:text="Quay về trang chủ"
+                android:background="@drawable/custom_button_add_cart"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_back"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_button_add_cart"
+                android:layout_marginTop="10dp"
+                android:text="Xem trạng thái đơn hàng"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

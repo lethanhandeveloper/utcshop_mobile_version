@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:dragEdge="right"
+    android:clickable="true"
+    app:mode="same_level">
+    <RelativeLayout
+        android:id="@+id/layout_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FF0000"
+        android:orientation="vertical">
+<!--        <TextView-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Delete"-->
+<!--            android:background="#E46B6B"/>-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_delete" />
+    </RelativeLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:buttonTint="#d9941d" />
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:src="@drawable/empty_cart" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên sản phẩm trong giỏ hàng"
+                android:textColor="#000"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_product_name"
+                android:text="229.000đ"
+                android:layout_marginEnd="6dp"
+                android:layout_toRightOf="@+id/txt_new_price"
+                android:visibility="gone"
+                android:textColor="#AFA8A8"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/txt_new_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_product_name"
+                android:text="129.000đ"
+                android:textColor="#F44336"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/btn_quantity_desc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/txt_new_price"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_button_change_number"
+                android:text="-" />
+            <TextView
+                android:id="@+id/txt_quantity"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="1"
+                android:layout_below="@+id/txt_new_price"
+                android:layout_marginTop="5dp"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/btn_quantity_desc"
+                android:layout_marginStart="10dp"/>
+            <Button
+                android:id="@+id/btn_quantity_asc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/txt_new_price"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_button_change_number"
+                android:layout_toRightOf="@+id/txt_quantity"
+                android:text="+" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
